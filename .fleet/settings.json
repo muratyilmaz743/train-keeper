@@ -1,0 +1,17 @@
+{
+    "plugins": [
+        {
+            "type": "add",
+            "pluginName": "fleet.emmet"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.intellij"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.tailwindcss"
+        }
+    ],
+  "nodejs.editor.formatOnSave.prettier.mode": "Enabled"
+}
