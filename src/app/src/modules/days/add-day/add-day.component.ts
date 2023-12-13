@@ -1,15 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef, inject } from '@angular/core';
+import { DayFormComponent } from '../day-form/day-form.component';
+import { CommonModule } from '@angular/common';
+import { ModalService } from '../../../shared/modal/modal.service';
+import { ModalComponent } from '../../../shared/modal/modal.component';
 
 @Component({
   selector: 'tracker-add-day',
   standalone: true,
-  imports: [],
-  template: `<button
-    class="text-pink-500 bg-transparent border border-solid border-pink-500 hover:bg-pink-500 hover:text-white active:bg-pink-600 font-bold uppercase px-4 py-2 rounded-full outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 "
-    type="button"
-  >
-    +
-  </button>`,
+  imports: [ModalComponent, DayFormComponent, CommonModule],
+  templateUrl: './add-day.component.html',
   styleUrl: './add-day.component.css',
+  providers: [ModalService],
 })
-export class AddDayComponent {}
+export class AddDayComponent {
+  constructor() {}
+
+  modalService = inject(ModalService);
+
+  openModal(modalTemplate: TemplateRef<any>) {
+    this.modalService.openModal();
+  }
+}
