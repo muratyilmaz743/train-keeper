@@ -17,7 +17,7 @@ export class AddDayComponent {
 
   modalService = inject(ModalService);
 
-  openModal(modalTemplate: TemplateRef<any>) {
+  openModal() {
     this.modalService.openModal();
   }
 }
