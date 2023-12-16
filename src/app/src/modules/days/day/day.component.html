@@ -2,14 +2,57 @@
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">First Day</div>
         <section class='flex flex-col gap-y-3.5'>
-          <div class="px-3 cursor-pointer rounded shadow-sm">Deadlift</div>
-          <div class="px-3 cursor-pointer rounded shadow-sm">Bench Press</div>
-          <div class="px-3 cursor-pointer rounded shadow-sm">Row</div>
-          <div (click)="openModal()" class="px-3 cursor-pointer rounded shadow-sm">Row</div>
+          <div class="px-3 cursor-pointer rounded">Deadlift</div>
+          <div class="px-3 cursor-pointer rounded">Bench Press</div>
+          <div class="px-3 cursor-pointer rounded">Row</div>
+          <button (click)="openModal()"  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-4 border border-blue-500 hover:border-transparent rounded">
+            Add Exercise
+          </button>
         </section>
       </div>
   </div>
 
    <tracker-modal>
-       adf
-    </tracker-modal>
+       <form [formGroup]="addExerciseForm" class="w-full">
+        <div class="md:flex md:items-center mb-6">
+          <div class="md:w-1/3">
+            <label class="block text-gray-500 font-bold md:text-center mb-1 md:mb-0 pr-4" for="inline-full-name">
+              Exercise Name
+            </label>
+          </div>
+          <div class="md:w-2/3">
+            <input formControlName="exerciseName" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" value="Jane Doe">
+          </div>
+        </div>
+        <div class="flex flex-row">
+        <div class="md:flex md:items-center mb-6">
+          <div class="md:w-1/3">
+            <label class="block text-gray-500 font-bold md:text-center mb-1 md:mb-0 pr-4" for="sets">
+              Sets
+            </label>
+          </div>
+          <div class="md:w-2/3">
+            <input formControlName="sets" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="sets" type="number">
+          </div>
+        </div>
+        <div class="md:flex md:items-center mb-6">
+          <div class="md:w-1/3">
+            <label class="block text-gray-500 font-bold md:text-center mb-1 md:mb-0 pr-4" for="reps">
+              Reps
+            </label>
+          </div>
+          <div class="md:w-2/3">
+            <input formControlName="reps" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="reps" type="number">
+          </div>
+        </div>
+        </div>
+        <div class="md:flex md:items-center">
+          <div class="md:w-1/3"></div>
+          <div class="md:w-2/3">
+            <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-4 px-4 rounded" type="button">
+              Add Exercise
+            </button>
+          </div>
+        </div>
+      </form>
+   </tracker-modal>
