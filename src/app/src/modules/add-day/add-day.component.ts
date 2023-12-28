@@ -1,8 +1,8 @@
 import { Component, TemplateRef, inject } from '@angular/core';
 import { DayFormComponent } from '../day-form/day-form.component';
 import { CommonModule } from '@angular/common';
-import { ModalService } from '../../../shared/modal/modal.service';
-import { ModalComponent } from '../../../shared/modal/modal.component';
+import { ModalComponent } from '../../shared/modal/modal.component';
+import { ModalService } from '../../shared/modal/modal.service';
 
 @Component({
   selector: 'tracker-add-day',

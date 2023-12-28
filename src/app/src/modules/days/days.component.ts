@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AddDayComponent } from './add-day/add-day.component';
-import { DayComponent } from './day/day.component';
+import { AddDayComponent } from '../add-day/add-day.component';
+import { DayComponent } from '../day/day.component';
 
 @Component({
   selector: 'tracker-days',

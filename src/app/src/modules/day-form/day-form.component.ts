@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ModalService } from '../../../shared/modal/modal.service';
+import { ModalService } from '../../shared/modal/modal.service';
 
 @Component({
   selector: 'tracker-day-form',

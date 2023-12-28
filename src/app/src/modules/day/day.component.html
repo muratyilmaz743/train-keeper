@@ -2,9 +2,9 @@
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">First Day</div>
         <section class='flex flex-col gap-y-3.5'>
-          <div class="px-3 cursor-pointer rounded">Deadlift</div>
-          <div class="px-3 cursor-pointer rounded">Bench Press</div>
-          <div class="px-3 cursor-pointer rounded">Row</div>
+          <a [routerLink]="['/training']" [queryParams]="{ trainingName: 'Deadlift' }" queryParamsHandling="merge" class="px-3 cursor-pointer rounded">Deadlift</a>
+          <a [routerLink]="['/training']" [queryParams]="{ trainingName: 'Deadlift' }" queryParamsHandling="merge" class="px-3 cursor-pointer rounded">Bench Press</a>
+          <a [routerLink]="['/training']" [queryParams]="{ trainingName: 'Deadlift' }" queryParamsHandling="merge" class="px-3 cursor-pointer rounded">Row</a>
           <button (click)="openModal()"  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-4 border border-blue-500 hover:border-transparent rounded">
             Add Exercise
           </button>
