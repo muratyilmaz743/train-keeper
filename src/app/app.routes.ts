@@ -4,5 +4,5 @@ import { TrainingRecordComponent } from './src/modules/training-record/training-
 
 export const routes: Routes = [
   { path: '', component: DaysComponent },
-  { path: 'training', component: TrainingRecordComponent },
+  { path: 'training/:trainingName', component: TrainingRecordComponent },
 ];
