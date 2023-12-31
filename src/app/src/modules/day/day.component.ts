@@ -21,8 +21,7 @@ export class DayComponent {
 
   addExerciseForm = new FormGroup({
     exerciseName: new FormControl(''),
-    sets: new FormControl(0),
-    reps: new FormControl(0),
+    weight: new FormControl(0),
   });
 
   openModal() {
